@@ -1,0 +1,29 @@
+
+word = "corrosive"
+need = ''
+life = 4
+while life > 0:
+    failed = 0
+    for char in word:
+        if char in need:
+            print (char, )
+        else:
+            print ("_")
+            failed += 1
+    if failed == 0:
+        print ("Chicken Dinner")
+        break
+    print
+    needless = input("guess a letter:")
+    need += needless
+    if needless not in word:
+        life -= 1
+        print ("Wrong")
+        if life ==3:
+            print ("omae")
+        if life == 2:
+            print ("wa mou")
+        if life ==1:
+            print ("shindeiru")
+        if life == 0:
+            print ("NAANIII!!!??")
