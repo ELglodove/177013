@@ -1,0 +1,6 @@
+import numpy as np
+A=np.random.random((5,5))
+x=np.mean(A)
+s=np.std(A)
+F=(A-x)/s
+print(F)
