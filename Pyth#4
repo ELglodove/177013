@@ -1,0 +1,31 @@
+import math as mt
+import numpy as np
+import matplotlib.pyplot as plt
+print("input initial hight above the ground")
+h=(input())
+print("input magnitude of the velocity")
+v=(input())
+print("input angle")
+theta=(input())
+print("input x-component of the accelearation")
+ax=(input())
+print("input y-component of the accelearation")
+ay=(input())
+if ay == 0:
+    print('value must not be Zero')
+    exit        
+else:    
+    realth= mt.radians(theta)
+    vx = v*mt.cos(realth)
+    vy = v*mt.sin(realth)
+    d = mt.sqrt(vy**2 - 4*(1/2*ay)*h)
+    t1 = (-vy + d )/ ay
+    t2 = (-vy - d )/ ay
+    
+   
+    x = vx*(np.linspace(0,t1)) + 1/2*ax*np.linspace(0,t1)**2
+    y = vy*np.linspace(0,t1) + 1/2*ay*np.linspace(0,t1)**2
+    
+    plt.plot(x,y)
+    plt.grid()
+    plt.show()
