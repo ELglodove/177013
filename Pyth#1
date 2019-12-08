@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+n = np.arange(0,100)
+if n.all() < 9:
+    p = n**2 - 7
+else:
+    p = n - 10
+plt.stem(n,p, '--',markerfmt='-')
+plt.grid()
+plt.show()
