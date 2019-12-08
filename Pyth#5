@@ -1,0 +1,18 @@
+import math as mt
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = np.arange(0,200)
+x = np.sin(((3*mt.pi)/ 100) * n )
+if n.all() == 0:
+    y = -1.5*x + (2*x *(n + 1)) - (0.5*x *(n+2))
+elif 0 < n and n <= 198:
+    y = (0.5*x)*(n+1) -  (0.5*x)*(n - 1)
+else:
+    y = 1.5*x - (2*x)*(n - 1) + (0.5*x)*(n - 2)
+plt.plot(x, color ='r')
+plt.plot(y, color ='g')
+plt.grid()
+plt.xlabel('x and y with respect to n')
+plt.ylabel('range of y with respect to x and n')
+plt.show()
