@@ -1,0 +1,99 @@
+import numpy as np
+
+print("Input data Xi and Yi \n")
+
+I=eval(input())
+
+x=np.array([I[0]])
+
+y=np.array([I[1]])
+
+X=x.flatten()
+
+Y=y.flatten()
+
+p1=np.polyfit(X,Y,1)
+Ep1=Y-[np.multiply(p1[0],X)+p1[1]]
+eRp1=np.linalg.norm(Ep1)
+
+p2=np.polyfit(X,Y,2)
+Ep2=Y-[np.multiply(p2[0],np.power(X,2))+np.multiply(p2[1],X)+p2[2]
+eRp2=np.linalg.norm(Ep2)
+
+p3=np.polyfit(X,Y,3)
+Ep3=Y-[np.multiply(p3[0],np.power(X,3))+np.multiply(p3[1],np.power(X,2))+np.multiply(p3[2],X)+p3[3]]
+eRp3=np.linalg.norm(Ep3)
+
+p4=np.polyfit(X,Y,4)
+Ep4=Y-[np.multiply(p4[0],np.power(X,4))+np.multiply(p4[1],np.power(X,3))+np.multiply(p4[2],np.power(X,2))+np.multiply(p4[3],X)+p4[4]]
+eRp4=np.linalg.norm(Ep4)
+
+p5=np.polyfit(X,Y,5)
+Ep5=Y-[np.multiply(p5[0],np.power(X,5))+np.multiply(p5[1],np.power(X,4))+np.multiply(p5[2],np.power(X,3))+np.multiply(p5[3],np.power(X,2))+np.multiply(p5[4],X)+p5[5]]
+eRp5=np.linalg.norm(Ep5)
+
+p6=np.polyfit(X,Y,6)
+Ep6=Y-[np.multiply(p6[0],np.power(X,6))+np.multiply(p6[1],np.power(X,5))+np.multiply(p6[2],np.power(X,4))+np.multiply(p6[3],np.power(X,3))+np.multiply(p6[4],np.power(X,2))+np.multiply(p6[5],x)+p6[6]]
+eRp6=np.linalg.norm(Ep6)
+
+p7=np.polyfit(X,Y,7)
+Ep7=Y-[np.multiply(p7[0],np.power(X,7))+np.multiply(p7[1],np.power(X,6))+np.multiply(p7[2],np.power(X,5))+np.multiply(p7[3],np.power(X,4))+np.multiply(p7[4],np.power(X,3))+np.multiply(p7[5],np.power(X,2))+np.multiply(p7[6],X)+p7[7]]
+eRp7=np.linalg.norm(Ep7)
+
+p8=np.polyfit(X,Y,8)
+Ep8=Y-[np.multiply(p8[0],np.power(X,8))+np.multiply(p8[1],np.power(X,7))+np.multiply(p8[2],np.power(X,6))+np.multiply(p8[3],np.power(X,5))+np.multiply(p8[4],np.power(X,4))+np.multiply(p8[5],np.power(X,3))+np.multiply(p8[6],np.power(X,2))+np.multiply(p8[7],X)+p8[8]]
+eRp8=np.linalg.norm(Ep8)
+
+p9=np.polyfit(X,Y,9)
+Ep9=Y-[np.multiply(p9[0],np.power(X,9))+np.multiply(p9[1],np.power(X,8))+np.multiply(p9[2],np.power(X,7))+np.multiply(p9[3],np.power(X,6))+np.multiply(p9[4],np.power(X,5))+np.multiply(p9[5],np.power(X,4))+np.multiply(p9[6],np.power(X,3))+np.multiply(p9[7],np.power(X,2))+np.multiply(p9[8],X)+p9[9]]
+eRp9=np.linalg.norm(Ep9)
+
+p10=np.polyfit(X,Y,10)
+Ep10=Y-[np.multiply(p10[0],np.power(X,10))+np.multiply(p10[1],np.power(X,9))+np.multiply(p10[2],np.power(X,8))+np.multiply(p10[3],np.power(X,7))+np.multiply(p10[4],np.power(X,6))+np.multiply(p10[5],np.power(X,5))+np.multiply(p10[6],np.power(X,4))+np.multiply(p10[7],np.power(X,3))+np.multiply(p10[8],np.power(X,2))+np.multiply(p10[9],X)+p10[10]]
+eRp10=np.linalg.norm(Ep10)
+
+AllL=[eRp1,eRp2,eRp3,eRp4,eRp5,eRp6,eRp7,eRp8,eRp9,eRp10]
+Alla=np.array([AllL])
+Ln=np.min(Alla)
+
+if (Ln==eRp10):
+
+    print(p10)
+
+elif (Lnr==eRp9):
+
+    print(p9)
+
+elif (Ln==eRp8):
+
+    print(p8)
+
+elif (Ln==eRp7):
+
+
+    print(p7)
+
+elif (Ln==eRp6):
+
+    print(p6)
+
+elif (Ln==eRp5):
+
+
+    print(p5)
+
+elif (Ln==eRp4):
+
+    print(p4)
+
+elif (Ln==eRp3):
+
+    print(p3)
+
+elif (Ln==eRp2):
+
+    print(p2)
+
+elif (Ln==eRp1):
+
+    print(p1)
